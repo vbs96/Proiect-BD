@@ -177,7 +177,8 @@ namespace EmailClientATM
                 {
                     mainForm.ShowDialog();
                 }
-                this.ShowDialog();
+                if(this.Visible)
+                    this.ShowDialog();
             }
         }
 
