@@ -1,0 +1,43 @@
+D:\Facultate\AN 3\Sem 1\Work\Baze\ClientEmailATM\EmailClientATM\EmailClientATM\bin\Debug\EmailClientATM.exe.config
+D:\Facultate\AN 3\Sem 1\Work\Baze\ClientEmailATM\EmailClientATM\EmailClientATM\bin\Debug\EmailClientATM.exe
+D:\Facultate\AN 3\Sem 1\Work\Baze\ClientEmailATM\EmailClientATM\EmailClientATM\bin\Debug\EmailClientATM.pdb
+D:\Facultate\AN 3\Sem 1\Work\Baze\ClientEmailATM\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.csprojResolveAssemblyReference.cache
+D:\Facultate\AN 3\Sem 1\Work\Baze\ClientEmailATM\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.FormEmail.resources
+D:\Facultate\AN 3\Sem 1\Work\Baze\ClientEmailATM\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.Properties.Resources.resources
+D:\Facultate\AN 3\Sem 1\Work\Baze\ClientEmailATM\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.csproj.GenerateResource.Cache
+D:\Facultate\AN 3\Sem 1\Work\Baze\ClientEmailATM\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.csproj.CoreCompileInputs.cache
+D:\Facultate\AN 3\Sem 1\Work\Baze\ClientEmailATM\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.exe
+D:\Facultate\AN 3\Sem 1\Work\Baze\ClientEmailATM\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.pdb
+D:\Facultate\AN 3\Sem 1\Work\Baze\ClientEmailATM\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.FormAutentificare.resources
+D:\Facultate\AN 3\Sem 1\Work\Baze\ClientEmailATM\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.FormLoginAdmin.resources
+D:\Facultate\AN 3\Sem 1\Work\Baze\ClientEmailATM\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.FormAdmin.resources
+D:\Facultate\AN 3\Sem 1\Work\Baze\ClientEmailATM\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.FormAddAdmin.resources
+D:\Facultate\AN 3\Sem 1\Work\Baze\ClientEmailATM\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.FormUpdateUtilizator.resources
+D:\Facultate\AN 3\Sem 1\Work\Baze\ClientEmailATM\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.FormResetPass1.resources
+D:\Facultate\AN 3\Sem 1\Work\Baze\ClientEmailATM\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.FormResetPass2.resources
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\bin\Debug\EmailClientATM.exe.config
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.exe
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.pdb
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\bin\Debug\EmailClientATM.exe
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\bin\Debug\EmailClientATM.pdb
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.csprojResolveAssemblyReference.cache
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.FormAddAdmin.resources
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.FormAdmin.resources
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.FormAutentificare.resources
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.FormEmail.resources
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.FormLoginAdmin.resources
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.FormResetPass1.resources
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.FormResetPass2.resources
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.FormUpdateUtilizator.resources
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.Properties.Resources.resources
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.csproj.GenerateResource.Cache
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.CreateMessageForm.resources
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\bin\Debug\EntityFramework.dll
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\bin\Debug\EntityFramework.xml
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.MainForm.resources
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.InboxForm.resources
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.ViewEmailForm.resources
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.ImportantForm.resources
+C:\Users\vitel\Desktop\EmailClientATM\EmailClientATM\obj\Debug\EmailClientATM.SpamForm.resources

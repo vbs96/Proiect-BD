@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmailClientModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Administratori">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Parola" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Importante">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ID_Mesaj" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Mesaj" Relationship="Self.FK_Importante_Mesaj" FromRole="Importante" ToRole="Mesaj" />
+  </EntityType>
+  <EntityType Name="Mesaj">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ID_Sender" Type="Int32" Nullable="false" />
+    <Property Name="ID_Receiver" Type="Int32" Nullable="false" />
+    <Property Name="Continut" Type="String" MaxLength="1024" FixedLength="true" Unicode="true" />
+    <Property Name="Subiect" Type="String" MaxLength="128" FixedLength="true" Unicode="true" />
+    <Property Name="Atasament" Type="String" MaxLength="256" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Importantes" Relationship="Self.FK_Importante_Mesaj" FromRole="Mesaj" ToRole="Importante" />
+    <NavigationProperty Name="Trashes" Relationship="Self.FK_Mesaj_Trash" FromRole="Mesaj" ToRole="Trash" />
+    <NavigationProperty Name="Utilizatori" Relationship="Self.FK_Mesaj_Utilizatori" FromRole="Mesaj" ToRole="Utilizatori" />
+    <NavigationProperty Name="Utilizatori1" Relationship="Self.FK_Mesaj_Utilizatori1" FromRole="Mesaj" ToRole="Utilizatori" />
+    <NavigationProperty Name="Spams" Relationship="Self.FK_Spam_Mesaj" FromRole="Mesaj" ToRole="Spam" />
+  </EntityType>
+  <EntityType Name="Spam">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ID_Mesaj" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Mesaj" Relationship="Self.FK_Spam_Mesaj" FromRole="Spam" ToRole="Mesaj" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Trash">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ID_Mesaj" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Mesaj" Relationship="Self.FK_Mesaj_Trash" FromRole="Trash" ToRole="Mesaj" />
+  </EntityType>
+  <EntityType Name="Utilizatori">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nume" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Prenume" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sex" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DataNastere" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="Telefon" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Parola" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Blocat" Type="Boolean" />
+    <Property Name="Interogare" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Mesajs" Relationship="Self.FK_Mesaj_Utilizatori" FromRole="Utilizatori" ToRole="Mesaj" />
+    <NavigationProperty Name="Mesajs1" Relationship="Self.FK_Mesaj_Utilizatori1" FromRole="Utilizatori" ToRole="Mesaj" />
+  </EntityType>
+  <Association Name="FK_Importante_Mesaj">
+    <End Role="Mesaj" Type="Self.Mesaj" Multiplicity="1" />
+    <End Role="Importante" Type="Self.Importante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mesaj">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Importante">
+        <PropertyRef Name="ID_Mesaj" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mesaj_Trash">
+    <End Role="Mesaj" Type="Self.Mesaj" Multiplicity="1" />
+    <End Role="Trash" Type="Self.Trash" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mesaj">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Trash">
+        <PropertyRef Name="ID_Mesaj" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mesaj_Utilizatori">
+    <End Role="Utilizatori" Type="Self.Utilizatori" Multiplicity="1" />
+    <End Role="Mesaj" Type="Self.Mesaj" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilizatori">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Mesaj">
+        <PropertyRef Name="ID_Sender" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mesaj_Utilizatori1">
+    <End Role="Utilizatori" Type="Self.Utilizatori" Multiplicity="1" />
+    <End Role="Mesaj" Type="Self.Mesaj" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilizatori">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Mesaj">
+        <PropertyRef Name="ID_Receiver" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Spam_Mesaj">
+    <End Role="Mesaj" Type="Self.Mesaj" Multiplicity="1" />
+    <End Role="Spam" Type="Self.Spam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mesaj">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Spam">
+        <PropertyRef Name="ID_Mesaj" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EmailClientEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Administratoris" EntityType="Self.Administratori" />
+    <EntitySet Name="Importantes" EntityType="Self.Importante" />
+    <EntitySet Name="Mesajs" EntityType="Self.Mesaj" />
+    <EntitySet Name="Spams" EntityType="Self.Spam" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Trashes" EntityType="Self.Trash" />
+    <EntitySet Name="Utilizatoris" EntityType="Self.Utilizatori" />
+    <AssociationSet Name="FK_Importante_Mesaj" Association="Self.FK_Importante_Mesaj">
+      <End Role="Mesaj" EntitySet="Mesajs" />
+      <End Role="Importante" EntitySet="Importantes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mesaj_Trash" Association="Self.FK_Mesaj_Trash">
+      <End Role="Mesaj" EntitySet="Mesajs" />
+      <End Role="Trash" EntitySet="Trashes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mesaj_Utilizatori" Association="Self.FK_Mesaj_Utilizatori">
+      <End Role="Utilizatori" EntitySet="Utilizatoris" />
+      <End Role="Mesaj" EntitySet="Mesajs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mesaj_Utilizatori1" Association="Self.FK_Mesaj_Utilizatori1">
+      <End Role="Utilizatori" EntitySet="Utilizatoris" />
+      <End Role="Mesaj" EntitySet="Mesajs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Spam_Mesaj" Association="Self.FK_Spam_Mesaj">
+      <End Role="Mesaj" EntitySet="Mesajs" />
+      <End Role="Spam" EntitySet="Spams" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
