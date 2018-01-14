@@ -140,15 +140,7 @@ namespace EmailClientATM
         {
             if (txtEmail.Text == "" || txtParola.Text == "")
             {
-                //MessageBox.Show("Completati toate campurile!");
-                txtEmail.Text = "vbs@atm.de";
-                txtParola.Text = "idk123";
-                this.Hide();
-                using (var mainForm = new MainForm(txtEmail.Text))
-                {
-                    mainForm.ShowDialog();
-                }
-                this.ShowDialog();
+                MessageBox.Show("Completati toate campurile!");
             }
             else if (!txtEmail.Text.Contains("@atm"))
             {
@@ -176,9 +168,9 @@ namespace EmailClientATM
                 using (var mainForm = new MainForm(txtEmail.Text))
                 {
                     mainForm.ShowDialog();
+                    if(this.Visible)
+                        this.ShowDialog();
                 }
-                if(this.Visible)
-                    this.ShowDialog();
             }
         }
 
