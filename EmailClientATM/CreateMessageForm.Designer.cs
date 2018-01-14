@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateMessageForm));
             this.SendButton = new System.Windows.Forms.Button();
             this.toTextBox = new System.Windows.Forms.TextBox();
             this.ToLabel = new System.Windows.Forms.Label();
@@ -105,6 +106,7 @@
             this.AttachmentButton.TabIndex = 8;
             this.AttachmentButton.Text = "Attachment";
             this.AttachmentButton.UseVisualStyleBackColor = true;
+            this.AttachmentButton.Click += new System.EventHandler(this.AttachmentButton_Click);
             // 
             // CreateMessageForm
             // 
@@ -119,6 +121,7 @@
             this.Controls.Add(this.ToLabel);
             this.Controls.Add(this.toTextBox);
             this.Controls.Add(this.SendButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreateMessageForm";
             this.Text = "Create";
             this.Load += new System.EventHandler(this.CreateMessageForm_Load);
